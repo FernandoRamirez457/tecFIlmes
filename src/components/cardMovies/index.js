@@ -12,7 +12,7 @@ export default function CardMovies({ titulo, nota, imagem }) {
         <>
             <TouchableOpacity style={styles.containerJogos} onPress={() => navigation.navigate('Details', { titulo: titulo, nota: nota, imagem: imagem })}>
 
-                <Image style={styles.images} source={require(`../../Img/${imagem}`)} />
+                <Image style={styles.images} source={{uri:(`https://image.tmdb.org/t/p/original/${imagem}`)}} />
                 <Text style={styles.titulo}>{titulo} </Text>
 
                 <Text style={styles.textNota}> {nota} </Text>
